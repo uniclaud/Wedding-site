@@ -3,300 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matrimonio di Luca & Claudia</title>
-
-  <!-- Google Fonts -->
+  <title>Luca & Claudia - 15 Giugno 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- 🌸 Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root {
-      --sage: #7c8f7a;
-      --sage-light: #f4f6f2;
-      --gold: #c9b16d;
-      --text: #3e3e3e;
-      --bg: #faf9f6;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--sage);
-      text-decoration: none;
-    }
-
-    header {
-      min-height: 70vh;
-      padding: 32px 20px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      background: #faf9f6;
+      color: #3e3e3e;
       text-align: center;
-      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
-      position: relative;
-      overflow: hidden;
     }
-
-    /* “bordino” stile boarding pass */
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -40px;
-      width: 120px;
-      height: 100%;
-      background: linear-gradient(145deg, #fdf7e4, #d4c187, #fdf7e4);
-      opacity: 0.8;
-      transform: skewX(-10deg);
-      z-index: 0;
+    header {
+      background: #7c8f7a;
+      color: white;
+      padding: 20px;
     }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 720px;
-      padding: 18px 22px;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 14px 40px rgba(0,0,0,0.06);
-      border: 1px solid rgba(201,177,109,0.35);
-      backdrop-filter: blur(6px);
-    }
-
-    .monogram {
-      font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
-      color: var(--gold);
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: 2.4rem;
-      margin-bottom: 4px;
-      color: var(--sage);
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      color: #888;
-      margin-bottom: 18px;
-    }
-
-    .date-place {
-      font-size: 0.95rem;
-      margin-bottom: 12px;
-    }
-
-    .date-place strong {
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .tagline {
-      font-style: italic;
-      font-size: 0.98rem;
-      color: #666;
-      margin-bottom: 8px;
-    }
-
-    .cta {
-      margin-top: 18px;
-      display: inline-flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 999px;
-      font-size: 0.9rem;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
       font-weight: 600;
-      cursor: pointer;
-      border: 1px solid transparent;
     }
-
-    .btn-primary {
-      background: var(--sage);
-      color: #fff;
-      border-color: var(--sage);
+    nav a:hover { color: #c9b16d; }
+    .hero {
+      padding: 80px 20px;
     }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--sage);
-      border-color: rgba(124,143,122,0.5);
-    }
-
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 18px 60px;
-    }
-
-    section {
-      margin-top: 40px;
-      padding: 22px 20px;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
-      border: 1px dashed rgba(124,143,122,0.25); /* richiama bordo ticket */
-    }
-
-    section h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.4rem;
-      color: var(--sage);
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #7c8f7a;
       margin-bottom: 10px;
     }
-
-    .details-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      font-size: 0.96rem;
+    .subtitle {
+      font-size: 1.1rem;
+      color: #c9b16d;
     }
-
-    .detail-label {
-      font-weight: 600;
-      color: var(--gold);
-      text-transform: uppercase;
-      font-size: 0.78rem;
-      letter-spacing: .16em;
+    .icons {
+      font-size: 2rem;
+      color: #c9b16d;
+      margin-top: 30px;
     }
-
-    .detail-box {
-      padding: 10px 0;
-      border-bottom: 1px dashed rgba(0,0,0,0.06);
-    }
-
-    .detail-box:last-child {
-      border-bottom: none;
-    }
-
-    .note {
-      font-size: 0.9rem;
-      color: #777;
-      margin-top: 10px;
-    }
-
-    .accent {
-      color: var(--gold);
+    .btn {
+      display: inline-block;
+      background: #7c8f7a;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 30px;
       font-weight: 600;
     }
-
     footer {
-      text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: #999;
-      padding: 26px 16px 32px;
-    }
-
-    @media (min-width: 720px) {
-      header {
-        padding: 60px 20px 80px;
-      }
-      h1 {
-        font-size: 2.9rem;
-      }
-      .details-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      padding: 40px 10px;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="hero-content">
-    <div class="monogram">L &amp; C</div>
-    <h1>Luca &amp; Claudia</h1>
-    <p class="subtitle">Boarding pass to our biggest trip</p>
-
-    <p class="date-place">
-      <strong>15 Giugno 2026</strong> · Minturno, Italia
-    </p>
-    <p class="tagline">
-      Prepara il passaporto: stiamo per decollare verso il “sì”.
-    </p>
-
-    <div class="cta">
-      <a href="#dettagli" class="btn btn-primary">Dettagli del matrimonio</a>
-      <a href="#rsvp" class="btn btn-outline">RSVP &amp; info viaggio</a>
-    </div>
-  </div>
+  <nav>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="details.html"><i class="fa-solid fa-church"></i> Dettagli</a>
+    <a href="hotels.html"><i class="fa-solid fa-bed"></i> Alloggi</a>
+    <a href="food.html"><i class="fa-solid fa-utensils"></i> Cibo</a>
+    <a href="rsvp.html"><i class="fa-solid fa-envelope"></i> RSVP</a>
+  </nav>
 </header>
 
-<main>
-  <section id="dettagli">
-    <h2>Dettagli del matrimonio</h2>
-    <div class="details-grid">
-      <div class="detail-box">
-        <div class="detail-label">Cerimonia</div>
-        <div>Chiesa di San Pietro Apostolo<br>Minturno</div>
-        <div>Ore <span class="accent">16:00</span></div>
-      </div>
-
-      <div class="detail-box">
-        <div class="detail-label">Ricevimento</div>
-        <div>Mamamare</div>
-        <div>A seguire dopo la cerimonia</div>
-      </div>
-
-      <div class="detail-box">
-        <div class="detail-label">Dress code</div>
-        <div>Elegante ma comodo per ballare ✨</div>
-      </div>
-
-      <div class="detail-box">
-        <div class="detail-label">Tema</div>
-        <div>Viaggio &amp; destinazioni: ogni invitato è un passeggero speciale del nostro volo.</div>
-      </div>
-    </div>
-    <p class="note">
-      Tutte le informazioni aggiornate (orari, eventuali navette, indicazioni stradali) saranno disponibili qui man mano che ci avviciniamo alla data.
-    </p>
-  </section>
-
-  <section id="rsvp">
-    <h2>RSVP &amp; informazioni viaggio</h2>
-    <p>
-      A breve qui troverai un form per confermare la tua presenza e per indicarci eventuali intolleranze alimentari, necessità speciali o dettagli sul viaggio.
-    </p>
-    <p class="note">
-      Per ora puoi già salvare questo sito tra i preferiti: il QR presente nell’invito ti riporterà sempre qui, con le informazioni più aggiornate.
-    </p>
-    <!-- In futuro potrai sostituire questo paragrafo con un link a Google Form o un form vero -->
-  </section>
-
-  <section id="alloggi">
-    <h2>Come arrivare &amp; dove dormire</h2>
-    <p>
-      Stiamo raccogliendo alcune proposte di alloggio per gli ospiti che arriveranno da fuori.
-      Presto qui troverai consigli su hotel, B&amp;B e indicazioni su come raggiungere la chiesa e il Mamamare.
-    </p>
-  </section>
-</main>
+<section class="hero">
+  <h1><i class="fa-solid fa-heart"></i> Luca &amp; Claudia <i class="fa-solid fa-heart"></i></h1>
+  <p class="subtitle">Il nostro viaggio inizia il 15 Giugno 2026 ✈️</p>
+  <div class="icons">
+    <i class="fa-solid fa-plane"></i> &nbsp;
+    <i class="fa-solid fa-ring"></i> &nbsp;
+    <i class="fa-solid fa-glass-cheers"></i> &nbsp;
+    <i class="fa-solid fa-location-dot"></i>
+  </div>
+  <a href="details.html" class="btn">Scopri di più</a>
+</section>
 
 <footer>
-  Luca &amp; Claudia · 15.06.2026 · Con affetto, non vediamo l’ora di festeggiare con te 💛
+  © 2026 Luca &amp; Claudia – Con affetto, non vediamo l’ora di festeggiare con voi 💛
 </footer>
 
 </body>
