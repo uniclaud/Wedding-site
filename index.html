@@ -3,94 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luca & Claudia - 15 Giugno 2026</title>
+  <title>Luca & Claudia Wedding – 15 Giugno 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <!-- 🌸 Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
+    :root {
+      --sage: #7c8f7a;
+      --gold: #c9b16d;
+      --light: #faf9f6;
+    }
     body {
+      background-color: var(--light);
       font-family: 'Nunito', sans-serif;
       margin: 0;
-      background: #faf9f6;
-      color: #3e3e3e;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
+      color: var(--sage);
     }
-    header {
-      background: #7c8f7a;
-      color: white;
-      padding: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-    }
-    nav a:hover { color: #c9b16d; }
-    .hero {
-      padding: 80px 20px;
+    .monogram {
+      font-family: "Playfair Display", serif;
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      margin-bottom: 0.5rem;
     }
     h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      color: #7c8f7a;
-      margin-bottom: 10px;
-    }
-    .subtitle {
-      font-size: 1.1rem;
-      color: #c9b16d;
-    }
-    .icons {
+      font-family: "Playfair Display", serif;
       font-size: 2rem;
-      color: #c9b16d;
-      margin-top: 30px;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 500px;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
     }
     .btn {
       display: inline-block;
-      background: #7c8f7a;
-      color: white;
-      padding: 10px 22px;
+      background-color: var(--sage);
+      color: #fff;
+      padding: 10px 25px;
       border-radius: 999px;
       text-decoration: none;
-      margin-top: 30px;
       font-weight: 600;
+      margin-top: 15px;
     }
-    footer {
-      font-size: 0.85rem;
-      color: #999;
-      padding: 40px 10px;
+    .icons {
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin: 1rem 0;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="details.html"><i class="fa-solid fa-church"></i> Dettagli</a>
-    <a href="hotels.html"><i class="fa-solid fa-bed"></i> Alloggi</a>
-    <a href="food.html"><i class="fa-solid fa-utensils"></i> Cibo</a>
-    <a href="rsvp.html"><i class="fa-solid fa-envelope"></i> RSVP</a>
-  </nav>
-</header>
+  <div class="monogram">L &amp; C</div>
+  <h1>Luca &amp; Claudia</h1>
 
-<section class="hero">
-  <h1><i class="fa-solid fa-heart"></i> Luca &amp; Claudia <i class="fa-solid fa-heart"></i></h1>
-  <p class="subtitle">Il nostro viaggio inizia il 15 Giugno 2026 ✈️</p>
+  <p><i class="fa-solid fa-calendar"></i> 15 Giugno 2026 · Minturno, Italia</p>
+
   <div class="icons">
     <i class="fa-solid fa-plane"></i> &nbsp;
     <i class="fa-solid fa-ring"></i> &nbsp;
-    <i class="fa-solid fa-glass-cheers"></i> &nbsp;
-    <i class="fa-solid fa-location-dot"></i>
+    <i class="fa-solid fa-heart"></i> &nbsp;
+    <i class="fa-solid fa-glass-cheers"></i>
   </div>
-  <a href="details.html" class="btn">Scopri di più</a>
-</section>
 
-<footer>
-  © 2026 Luca &amp; Claudia – Con affetto, non vediamo l’ora di festeggiare con voi 💛
-</footer>
+  <p>
+    Benvenuti al nostro sito di matrimonio.<br>
+    Qui troverete tutte le informazioni utili per condividere con noi il nostro giorno più bello.
+  </p>
+  <p>
+    Welcome to our wedding website.<br>
+    Here you’ll find all the details to celebrate our special day together.
+  </p>
+
+  <a href="details.html" class="btn">Entra · Enter</a>
 
 </body>
 </html>
