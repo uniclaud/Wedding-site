@@ -9,7 +9,8 @@
   <style>
     :root {
       --sage: #7c8f7a;
-      --gold: #c9b16d;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
       --light: #faf9f6;
     }
     body {
@@ -26,10 +27,12 @@
     }
     .monogram {
       font-family: "Playfair Display", serif;
-      font-size: 3rem;
-      color: var(--gold);
-      letter-spacing: 0.3em;
-      margin-bottom: 0.5rem;
+      font-size: 3.8rem;
+      letter-spacing: -0.05em; /* 🔸 lettere ravvicinate */
+      margin-bottom: 0.2rem;
+      background: linear-gradient(45deg, var(--gold1), var(--gold2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     h1 {
       font-family: "Playfair Display", serif;
@@ -43,6 +46,11 @@
       line-height: 1.5;
       margin-bottom: 1.2rem;
     }
+    .subtitle {
+      color: var(--gold1);
+      font-style: italic;
+      font-size: 1.1rem;
+    }
     .btn {
       display: inline-block;
       background-color: var(--sage);
@@ -52,17 +60,26 @@
       text-decoration: none;
       font-weight: 600;
       margin-top: 15px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #6b7f69;
     }
     .icons {
       font-size: 1.5rem;
-      color: var(--gold);
+      color: var(--gold1);
       margin: 1rem 0;
+    }
+    footer {
+      font-size: 0.8rem;
+      color: #999;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <div class="monogram">L&amp;C</div>
+  <div class="monogram">L &amp; C</div>
   <h1>Luca &amp; Claudia</h1>
 
   <p><i class="fa-solid fa-calendar"></i> 15 Giugno 2026 · Minturno, Italia</p>
@@ -74,16 +91,19 @@
     <i class="fa-solid fa-glass-cheers"></i>
   </div>
 
-  <p>
-    Benvenuti al nostro sito di matrimonio.<br>
-    Qui troverete tutte le informazioni utili per condividere con noi il nostro giorno più bello.
+  <p class="subtitle">
+    Prepara il passaporto: stiamo per decollare verso il nostro “sì” ✈️
   </p>
   <p>
-    Welcome to our wedding website.<br>
-    Here you’ll find all the details to celebrate our special day together.
+    Pack your passport – we’re ready to take off towards our “I do” ✈️
   </p>
 
   <a href="details.html" class="btn">Entra · Enter</a>
 
+  <footer>
+    © 2026 Luca & Claudia – Con affetto, non vediamo l’ora di festeggiare con voi 💛
+  </footer>
+
 </body>
 </html>
+
