@@ -128,14 +128,24 @@
       font-size: 1.4rem;
     }
 
-    ul {
-      list-style: none;
-      margin-top: 10px;
-      line-height: 1.7;
+    .hotel-card {
+      margin-top: 18px;
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,177,109,0.3);
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
-    ul li {
-      margin-bottom: 18px;
+    .hotel-card h3 {
+      color: var(--gold1);
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
+    }
+
+    .hotel-card p {
+      line-height: 1.6;
+      margin-bottom: 6px;
     }
 
     a {
@@ -177,40 +187,45 @@
   <main>
     <section>
       <h2>Hotel consigliati · <span style="font-style:italic; color:#777;">Recommended hotels</span></h2>
-      <ul>
-        <li>
-          🏛️ <strong>Hotel Teatro Romano</strong><br>
-          <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
+
+      <div class="hotel-card">
+        <h3>🏛️ Hotel Teatro Romano</h3>
+        <p>
+          Situato accanto all’antico teatro romano di Minturno, offre camere moderne con vista panoramica e un’atmosfera tranquilla.<br>
+          <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
+        </p>
+        <p>
+          🔗 <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
             booking.com/hotel/teatro-romano
-          </a><br>
-          <span>
-            Situato accanto all’antico teatro romano di Minturno, offre camere moderne con vista panoramica e un’atmosfera tranquilla.<br>
-            <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
-          </span>
-        </li>
+          </a>
+        </p>
+      </div>
 
-        <li>
-          🌿 <strong>Albergo Eleonora</strong><br>
-          <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
+      <div class="hotel-card">
+        <h3>🌿 Albergo Eleonora</h3>
+        <p>
+          Un’accogliente struttura a gestione familiare nel cuore di Minturno, con camere luminose, vista panoramica e un’ottima colazione.<br>
+          <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms with panoramic views and an excellent breakfast.</em>
+        </p>
+        <p>
+          🔗 <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
             booking.com/hotel/albergo-eleonora
-          </a><br>
-          <span>
-            Un’accogliente struttura a gestione familiare nel cuore di Minturno, con camere luminose e un’ottima colazione.<br>
-            <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms and an excellent breakfast.</em>
-          </span>
-        </li>
+          </a>
+        </p>
+      </div>
 
-        <li>
-          🌸 <strong>La Rosetta</strong><br>
-          <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
+      <div class="hotel-card">
+        <h3>🌸 La Rosetta</h3>
+        <p>
+          A pochi minuti dal mare, combina comfort moderno, ospitalità locale e una splendida vista panoramica sul Golfo.<br>
+          <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort, local hospitality and a stunning panoramic view of the gulf.</em>
+        </p>
+        <p>
+          🔗 <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
             booking.com/hotel/la-rosetta
-          </a><br>
-          <span>
-            A pochi minuti dal mare, combina comfort moderno e ospitalità locale — perfetta per chi cerca relax.<br>
-            <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort and local hospitality — perfect for a relaxing stay.</em>
-          </span>
-        </li>
-      </ul>
+          </a>
+        </p>
+      </div>
     </section>
 
     <section>
