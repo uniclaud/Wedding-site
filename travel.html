@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come arrivare · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --sage-light: #f4f6f2;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid rgba(201,177,109,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-align: center;
+      transition: color 0.25s ease;
+    }
+
+    nav a span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: -2px;
+    }
+
+    nav a:hover { color: var(--gold1); }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40px;
+      width: 120px;
+      height: 140%;
+      background: linear-gradient(145deg, #fdf7e4, var(--gold1), #fdf7e4);
+      opacity: 0.9;
+      transform: skewX(-10deg);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      color: var(--sage);
+      position: relative;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      padding: 40px 20px 80px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--sage);
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    .travel-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .travel-box {
+      padding: 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,177,109,0.3);
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .travel-box h3 {
+      color: var(--gold1);
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .travel-box p {
+      line-height: 1.6;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: var(--sage);
+      color: #fff;
+      transition: all 0.25s;
+    }
+
+    .btn:hover {
+      background: #6b7f69;
+      transform: translateY(-1px);
+    }
+
+    .map {
+      width: 100%;
+      height: 300px;
+      background: linear-gradient(135deg, #e5eadf, #d3d9d0);
+      border-radius: 12px;
+      border: 1px solid rgba(201,177,109,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c7a68;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 26px 16px 32px;
+    }
+
+    @media (max-width: 720px) {
+      header { border-radius: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home<span>Home</span></a>
+    <a href="alloggi.html">Alloggi<span>Where to stay</span></a>
+    <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
+    <a href="around.html">Cosa fare<span>Things to do</span></a>
+    <a href="travel.html">Come arrivare<span>How to get there</span></a>
+    <a href="afterparty.html">After Party<span>Photos</span></a>
+  </nav>
+
+  <header>
+    <h1>Come arrivare &amp; RSVP</h1>
+    <p><em>How to get there &amp; RSVP</em></p>
+  </header>
+
+  <main>
+    <!-- MAPPA -->
+    <section>
+      <h2>Mappa &amp; posizione · <span style="font-style:italic; color:#777;">Map &amp; location</span></h2>
+      <div class="map">
+        <div class="map">
+  <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+    <!-- sfondo -->
+    <rect width="800" height="400" fill="#f4f6f2"/>
+
+    <!-- linea di costa -->
+    <path d="M0,320 Q200,300 400,330 T800,310 L800,400 L0,400 Z" fill="#d8d8c8" stroke="none"/>
+
+    <!-- collegamenti -->
+    <line x1="260" y1="190" x2="400" y2="260" stroke="#c9b16d" stroke-width="2" stroke-dasharray="4,4"/>
+    <line x1="560" y1="80" x2="400" y2="260" stroke="#c9b16d" stroke-width="2" stroke-dasharray="4,4"/>
+
+    <!-- punti città -->
+    <circle cx="400" cy="260" r="6" fill="#7c8f7a"/>
+    <text x="410" y="255" font-size="14" fill="#3e3e3e" font-family="Nunito">Minturno</text>
+
+    <circle cx="260" cy="190" r="6" fill="#7c8f7a"/>
+    <text x="180" y="185" font-size="14" fill="#3e3e3e" font-family="Nunito">Napoli · 80 km</text>
+
+    <circle cx="560" cy="80" r="6" fill="#7c8f7a"/>
+    <text x="580" y="85" font-size="14" fill="#3e3e3e" font-family="Nunito">Roma · 150 km</text>
+
+    <circle cx="430" cy="250" r="4" fill="#c9b16d"/>
+    <text x="440" y="247" font-size="12" fill="#666" font-family="Nunito">Formia</text>
+
+    <circle cx="460" cy="240" r="4" fill="#c9b16d"/>
+    <text x="470" y="238" font-size="12" fill="#666" font-family="Nunito">Gaeta</text>
+
+    <circle cx="490" cy="230" r="4" fill="#c9b16d"/>
+    <text x="500" y="228" font-size="12" fill="#666" font-family="Nunito">Sperlonga</text>
+
+    <!-- legenda -->
+    <rect x="600" y="330" width="180" height="50" rx="10" ry="10" fill="#fff" stroke="#c9b16d" stroke-width="1.2"/>
+    <text x="610" y="350" font-size="12" fill="#3e3e3e" font-family="Nunito">📍 Posizione</text>
+    <text x="610" y="365" font-size="12" fill="#3e3e3e" font-family="Nunito">—— Percorso</text>
+    <line x1="695" y1="361" x2="730" y2="361" stroke="#c9b16d" stroke-width="2" stroke-dasharray="4,4"/>
+  </svg>
+</div>
+
+      </div>
+      <p style="text-align:center; color:#666;">
+        Minturno si trova sulla costa tirrenica tra Roma e Napoli, facilmente raggiungibile in auto o treno.<br>
+        <em>Minturno lies on the Tyrrhenian coast between Rome and Naples, easily accessible by car or train.</em>
+      </p>
+    </section>
+
+    <!-- COME ARRIVARE -->
+    <section>
+      <h2>Come arrivare · <span style="font-style:italic; color:#777;">How to get there</span></h2>
+      <div class="travel-grid">
+
+        <div class="travel-box">
+          <h3>🚗 In auto / By car</h3>
+          <p>
+            Da Roma: circa <strong>2 ore</strong> (A1 uscita Cassino o Formia-Garigliano).<br>
+            Da Napoli: circa <strong>1 ora e 20 minuti</strong> (A1 uscita Cassino o Minturno).<br>
+            Parcheggio gratuito disponibile vicino alla chiesa e al Mamamare.
+            <br><em style="color:#777;">From Rome: about 2 hours (A1 motorway, Cassino exit). From Naples: about 1h20m. Free parking near the church and venue.</em>
+          </p>
+        </div>
+
+        <div class="travel-box">
+          <h3>🚆 In treno / By train</h3>
+          <p>
+            Stazione più vicina: <strong>Minturno-Scauri</strong> (linea Roma–Napoli).<br>
+            Collegamenti diretti ogni ora da entrambe le città.<br>
+            Tempo di percorrenza: <strong>1h50 da Roma</strong> / <strong>1h10 da Napoli</strong>.<br>
+            <em style="color:#777;">Nearest station: Minturno-Scauri (Rome–Naples line). Direct trains hourly from both cities.</em>
+          </p>
+          <p>🔗 <a href="https://www.trenitalia.com" target="_blank">Orari Trenitalia</a></p>
+        </div>
+
+        <div class="travel-box">
+          <h3>✈️ In aereo / By plane</h3>
+          <p>
+            Aeroporti consigliati:<br>
+            ✈️ <strong>Roma Fiumicino (FCO)</strong> – circa 2h30 in auto<br>
+            ✈️ <strong>Napoli Capodichino (NAP)</strong> – circa 1h30 in auto<br>
+            Entrambi collegati in treno via Roma o Napoli centrale.
+            <br><em style="color:#777;">Recommended airports: Rome Fiumicino (2h30 drive) or Naples Capodichino (1h30 drive). Easy rail connections available.</em>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Luca &amp; Claudia · 15.06.2026 💛<br>
+    <span style="font-style:italic; color:#777;">With love, we can’t wait to celebrate with you.</span>
+  </footer>
+</body>
+</html>
