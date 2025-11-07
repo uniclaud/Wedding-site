@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alloggi · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --gold: #c9b16d;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 16px 10px;
+    }
+
+    .monogram {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      color: var(--sage);
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      padding: 0 16px 40px;
+    }
+
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 18px;
+      border: 1px solid rgba(201,177,109,0.4);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+
+    .card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      color: var(--sage);
+      margin-bottom: 4px;
+    }
+
+    .location {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .eng {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: #777;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 18px;
+    }
+
+    a {
+      color: var(--sage);
+      text-decoration: none;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-decoration: none;
+      border-radius: 999px;
+      border: 1px solid rgba(124,143,122,0.5);
+      padding: 8px 16px;
+    }
+
+    @media (min-width: 720px) {
+      .hotel-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="monogram">L &amp; C</div>
+  <h1>Dove dormire</h1>
+  <p class="subtitle">
+    Alcune strutture consigliate per il vostro soggiorno a Minturno e dintorni.<br>
+    <span class="eng">A selection of places to stay around Minturno and nearby.</span>
+  </p>
+</header>
+
+<main>
+  <div class="hotel-grid">
+
+    <div class="card">
+      <h2>Hotel Teatro Romano</h2>
+      <p class="location">Minturno</p>
+      <p class="desc">
+        Hotel vicino all’area archeologica, camere moderne e luminose, comodo per chi vuole esplorare il centro storico.
+      </p>
+      <p class="eng">
+        Close to the archaeological site, with modern bright rooms – ideal if you’d like to explore the old town.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Hotel Villa Eleonora</h2>
+      <p class="location">Marina di Minturno · fronte mare</p>
+      <p class="desc">
+        Storica struttura sul lungomare, alcune camere vista mare e accesso diretto alla spiaggia.
+      </p>
+      <p class="eng">
+        A classic seaside hotel on the waterfront, some rooms with sea view and direct beach access.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Hotel La Rosetta</h2>
+      <p class="location">Marina di Minturno</p>
+      <p class="desc">
+        Hotel semplice e funzionale a pochi passi dalla spiaggia, ideale per un soggiorno pratico vicino al mare.
+      </p>
+      <p class="eng">
+        Simple and functional hotel just a short walk from the beach – great for a practical stay by the sea.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Minturnae Hotel</h2>
+      <p class="location">Marina di Minturno</p>
+      <p class="desc">
+        Struttura recente con camere confortevoli, giardino e posizione comoda per spostarsi tra mare e centro.
+      </p>
+      <p class="eng">
+        A modern hotel with comfortable rooms and a garden, conveniently located between the beach and town.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Hotel Aurora</h2>
+      <p class="location">Scauri · vista mare</p>
+      <p class="desc">
+        Hotel fronte mare con piscina (stagionale) e ristorante, adatto a famiglie e coppie.
+      </p>
+      <p class="eng">
+        Seafront hotel with a seasonal pool and restaurant, suitable for both couples and families.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Hotel Panoramico</h2>
+      <p class="location">Marina di Minturno</p>
+      <p class="desc">
+        Come suggerisce il nome, offre una bella vista sul mare e un’atmosfera rilassata per chi cerca tranquillità.
+      </p>
+      <p class="eng">
+        As the name suggests, it offers lovely sea views and a relaxed atmosphere for a quiet stay.
+      </p>
+    </div>
+
+  </div>
+
+  <p class="note">
+    Ti consigliamo di prenotare con anticipo, soprattutto per i weekend.<br>
+    <span class="eng">We recommend booking early, especially for weekends and high season.</span>
+  </p>
+
+  <a href="index.html" class="back">← Torna alla home · Back to home</a>
+</main>
+
+</body>
+</html>
