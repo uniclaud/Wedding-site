@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ristoranti & Pizzerie · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --sage-light: #f4f6f2;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* NAVBAR */
+    nav {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid rgba(201,177,109,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-align: center;
+      transition: color 0.25s ease;
+    }
+
+    nav a span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: -2px;
+    }
+
+    nav a:hover { color: var(--gold1); }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40px;
+      width: 120px;
+      height: 140%;
+      background: linear-gradient(145deg, #fdf7e4, var(--gold1), #fdf7e4);
+      opacity: 0.9;
+      transform: skewX(-10deg);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      color: var(--sage);
+      position: relative;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      width: 100%;
+      padding: 40px 20px 80px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--sage);
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    /* GRID 2x2 */
+    .resto-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .resto-card {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,177,109,0.3);
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .resto-card h3 {
+      color: var(--gold1);
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .resto-card p {
+      line-height: 1.6;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--gold1);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover { color: var(--gold2); }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 26px 16px 32px;
+    }
+
+    @media (max-width: 720px) {
+      .resto-grid {
+        grid-template-columns: 1fr;
+      }
+      header { border-radius: 0; }
+      nav { gap: 12px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home<span>Home</span></a>
+    <a href="alloggi.html">Alloggi<span>Where to stay</span></a>
+    <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
+    <a href="around.html">Cosa fare<span>Things to do</span></a>
+    <a href="travel.html">Come arrivare<span>How to get there</span></a>
+    <a href="afterparty.html">After Party<span>Photos</span></a>
+  </nav>
+
+  <header>
+    <h1>Dove mangiare &amp; bere</h1>
+    <p><em>Where to eat &amp; drink</em></p>
+  </header>
+
+  <main>
+    <!-- RISTORANTI / PIZZERIE -->
+    <section>
+      <h2>Ristoranti &amp; pizzerie consigliate · <span style="font-style:italic; color:#777;">Recommended places</span></h2>
+
+      <div class="resto-grid">
+        <!-- Aria Nuova -->
+        <div class="resto-card">
+          <h3>🍕 Aria Nuova – Pizzeria contemporanea (Formia)</h3>
+          <p>
+            Pizzeria contemporanea a Formia, con impasto studiato, ingredienti selezionati e pizze creative: perfetta se vuoi provare qualcosa di diverso dalla solita margherita.
+            <br>
+            <em style="color:#777;">
+              A contemporary pizzeria in Formia with a carefully developed dough, selected ingredients and creative toppings – perfect if you’d like something beyond a classic margherita.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.arianuovapizzeria.it" target="_blank">Sito ufficiale · Official website</a>
+          </p>
+        </div>
+
+        <!-- Basilico's -->
+        <div class="resto-card">
+          <h3>🌿 Pizzeria Basilico’s (Minturno)</h3>
+          <p>
+            Pizzeria nel centro storico di Minturno, con terrazza panoramica, impasto leggero e ottimi antipasti. Atmosfera perfetta per una cena lenta dopo una giornata al mare.
+            <br>
+            <em style="color:#777;">
+              Pizzeria in Minturno’s historic center with a panoramic terrace, light dough and great starters – ideal for a relaxed dinner after a day at the beach.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.tripadvisor.com/Restaurant_Review-g2052393-d12323123-Reviews-Pizzeria_Basilicos-Minturno_Province_of_Latina_Lazio.html" target="_blank">
+              Info &amp; recensioni · Info &amp; reviews
+            </a>
+          </p>
+        </div>
+
+        <!-- Pucci e Manella -->
+        <div class="resto-card">
+          <h3>🔥 Pucci e Manella (Formia, Via Appia)</h3>
+          <p>
+            Pizzeria napoletana moderna sulla Via Appia a Formia, con impasto ad alta idratazione, grandi classici e pizze “speciali” più creative. Locale moderno con spazi interni ed esterni.
+            <br>
+            <em style="color:#777;">
+              A modern Neapolitan-style pizzeria on the Via Appia in Formia, featuring high-hydration dough, traditional classics and more creative “special” pizzas, in a contemporary venue with indoor and outdoor areas.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.50toppizza.it/en/referenza/pizzeria-pucci-e-manella-3/" target="_blank">
+              Scheda pizzeria · Pizza guide page
+            </a>
+          </p>
+        </div>
+
+        <!-- Cork -->
+        <div class="resto-card">
+          <h3>🍔 Cork – Cocktail Bar &amp; Food (Formia)</h3>
+          <p>
+            Cocktail bar &amp; burger place a Formia, con drink curati, birre artigianali e panini gourmet: perfetto per un aperitivo lungo o una serata più informale tra amici.
+            <br>
+            <em style="color:#777;">
+              A cocktail and burger bar in Formia, offering crafted drinks, craft beers and gourmet burgers – great for an aperitivo or a more informal night out with friends.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://corkformia.it" target="_blank">Sito ufficiale · Official website</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVIDA / NIGHTLIFE -->
+    <section>
+      <h2>Movida &amp; cocktail bar · <span style="font-style:italic; color:#777;">Nightlife</span></h2>
+
+      <div class="resto-grid">
+        <!-- Farmacia Alcolica -->
+        <div class="resto-card">
+          <h3>🍸 Apotheke – Farmacia Alcolica (Formia)</h3>
+          <p>
+            Cocktail bar iconico di Formia, ispirato a una vecchia farmacia: bottiglie ovunque, luci soffuse, distillati da tutto il mondo e drink creativi. Ideale per un dopocena particolare.
+            <br>
+            <em style="color:#777;">
+              An iconic cocktail bar in Formia, styled like an old pharmacy: shelves of bottles, low lights, premium spirits and signature drinks – perfect for a special after-dinner.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://apothekefarmacialcolica.com" target="_blank">Sito ufficiale · Official website</a>
+          </p>
+        </div>
+
+        <!-- Morgana -->
+        <div class="resto-card">
+          <h3>🍺 Morgana Birreria &amp; Bistrot (Formia)</h3>
+          <p>
+            Storica birreria di Formia, con tante birre alla spina, tavoli all’aperto e spesso musica o eventi: atmosfera informale e vivace, perfetta per gruppi di amici.
+            <br>
+            <em style="color:#777;">
+              A historic beer pub in Formia with many beers on tap, outdoor seating and frequent events – a lively, informal spot great for groups.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.facebook.com/morganaformia1999/" target="_blank">Pagina Facebook · Facebook page</a>
+          </p>
+        </div>
+
+        <!-- Vindicio -->
+        <div class="resto-card">
+          <h3>🌊 Spiaggia di Vindicio &amp; chioschi (Formia)</h3>
+          <p>
+            Zona di spiaggia molto amata tra Formia e Gaeta, con lidi e chioschi dove fermarsi per un drink vista mare, soprattutto al tramonto. In estate l’atmosfera è molto vivace.
+            <br>
+            <em style="color:#777;">
+              A beloved beach area between Formia and Gaeta, with beach bars and kiosks where you can enjoy a drink with sea views, especially at sunset. Very lively in summer.
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.tripadvisor.it/Attraction_Review-g194765-d12415801-Reviews-Spiaggia_di_Vindicio-Formia_Province_of_Latina_Lazio.html" target="_blank">
+              Info spiaggia · Beach info
+            </a>
+          </p>
+        </div>
+
+        <!-- Gaeta -->
+        <div class="resto-card">
+          <h3>🌙 Gaeta – centro storico &amp; lungomare</h3>
+          <p>
+            A pochi minuti in auto, Gaeta offre wine bar e cocktail bar tra vicoli, piazzette e lungomare: perfetta per una passeggiata serale con un drink, tra locali come piccoli pub, enoteche e bar sul porto.
+            <br>
+            <em style="color:#777;">
+              Just a short drive away, Gaeta offers wine bars and cocktail bars along its old town alleys and seafront – ideal for an evening stroll with a drink, between pubs, wine bars and harbor-side spots.
+            </em>
+          </p>
+          <p>
+            🔗 Suggeriamo di cercare “Gaeta nightlife” su Google Maps per vedere i bar più vicini al vostro alloggio.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Luca &amp; Claudia · 15.06.2026 💛<br>
+    <span style="font-style:italic; color:#777;">With love, we can’t wait to celebrate with you.</span>
+  </footer>
+</body>
+</html>
