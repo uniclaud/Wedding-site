@@ -4,106 +4,272 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luca & Claudia Wedding – 15 Giugno 2026</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     :root {
       --sage: #7c8f7a;
+      --sage-light: #f4f6f2;
       --gold1: #c9b16d;
       --gold2: #e8d6a3;
-      --light: #faf9f6;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
     }
-    body {
-      background-color: var(--light);
-      font-family: 'Nunito', sans-serif;
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      color: var(--sage);
+      padding: 0;
     }
+
+    body {
+      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      min-height: 70vh;
+      padding: 32px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+    }
+
+    /* fascia dorata laterale tipo boarding pass */
+    header::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40px;
+      width: 120px;
+      height: 140%;
+      background: linear-gradient(145deg, #fdf7e4, var(--gold1), #fdf7e4);
+      opacity: 0.9;
+      transform: skewX(-10deg);
+      z-index: 0;
+    }
+
+    .hero-card {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      width: 100%;
+      padding: 24px 22px 28px;
+      margin-left: 40px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border: 1px solid rgba(201,177,109,0.35);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+
     .monogram {
       font-family: "Playfair Display", serif;
-      font-size: 3.8rem;
-      letter-spacing: -0.05em; /* 🔸 lettere ravvicinate */
-      margin-bottom: 0.2rem;
+      font-size: 2.4rem;
+      letter-spacing: -0.05em;
+      margin-bottom: .2rem;
       background: linear-gradient(45deg, var(--gold1), var(--gold2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    .subtitle-top {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: #999;
+      margin-bottom: 6px;
+    }
+
     h1 {
       font-family: "Playfair Display", serif;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.1rem;
+      margin-bottom: 4px;
+      color: var(--sage);
     }
-    p {
-      font-size: 1rem;
-      color: #555;
-      max-width: 500px;
-      line-height: 1.5;
-      margin-bottom: 1.2rem;
+
+    .date-place {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
     }
-    .subtitle {
+
+    .date-place strong {
       color: var(--gold1);
+      font-weight: 700;
+    }
+
+    .icons-row {
+      font-size: 1.4rem;
+      color: var(--gold1);
+      margin: 8px 0 14px;
+    }
+
+    .icons-row i {
+      margin: 0 4px;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
       font-style: italic;
-      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 4px;
     }
-    .btn {
-      display: inline-block;
-      background-color: var(--sage);
-      color: #fff;
-      padding: 10px 25px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 15px;
-      transition: background 0.3s;
+
+    .tagline-en {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 14px;
     }
-    .btn:hover {
-      background-color: #6b7f69;
-    }
-    .icons {
-      font-size: 1.5rem;
-      color: var(--gold1);
-      margin: 1rem 0;
-    }
-    footer {
+
+    .note-small {
       font-size: 0.8rem;
       color: #999;
-      margin-top: 40px;
+      margin-bottom: 4px;
+    }
+
+    .cta {
+      margin-top: 16px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: var(--sage);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: #6b7f69;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary i {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      header {
+        padding: 20px 14px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      header::before {
+        left: -70px;
+        width: 110px;
+      }
+      .hero-card {
+        margin-left: 0;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="monogram">L &amp; C</div>
-  <h1>Luca &amp; Claudia</h1>
+<header>
+  <div class="hero-content">
+    <div class="monogram">L &amp; C</div>
+    <h1>Luca &amp; Claudia</h1>
+    <p class="subtitle">Boarding pass to our biggest trip</p>
 
-  <p><i class="fa-solid fa-calendar"></i> 15 Giugno 2026 · Minturno, Italia</p>
+    <p class="date-place">
+      <strong>15 Giugno 2026</strong> · Minturno, Italia
+    </p>
 
-  <div class="icons">
-    <i class="fa-solid fa-plane"></i> &nbsp;
-    <i class="fa-solid fa-ring"></i> &nbsp;
-    <i class="fa-solid fa-heart"></i> &nbsp;
-    <i class="fa-solid fa-glass-cheers"></i>
-  </div>
+    <div class="icons-row">
+      <i class="fa-solid fa-plane"></i>
+      <i class="fa-solid fa-ring"></i>
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-solid fa-glass-cheers"></i>
+    </div>
 
-  <p class="subtitle">
-    Prepara il passaporto: stiamo per decollare verso il nostro “sì” ✈️
-  </p>
-  <p>
-    Pack your passport – we’re ready to take off towards our “I do” ✈️
-  </p>
+    <p class="tagline">
+      Prepara il passaporto: questo è il tuo boarding pass per volare verso il nostro “sì” ✈️
+    </p>
+    <p class="tagline-en">
+      Pack your passport: this is your boarding pass to fly with us towards our “I do” ✈️
+    </p>
 
-  <a href="details.html" class="btn">Entra · Enter</a>
+   <main>
+  <section id="dettagli">
+    <h1><i class="fa-solid fa-ring"></i> Dettagli del matrimonio · Wedding Details</h1>
 
-  <footer>
-    © 2026 Luca & Claudia – Con affetto, non vediamo l’ora di festeggiare con voi 💛
-  </footer>
+    <div class="details-grid">
+      <div class="detail-box">
+        <div class="detail-label"><i class="fa-solid fa-church"></i> Cerimonia · Ceremony</div>
+        <div>Chiesa di San Pietro Apostolo<br>Minturno</div>
+        <div>Ore <span class="accent">11:00</span></div>
+        <div class="eng">Church of San Pietro Apostolo<br>Minturno</div>
+        <div class="eng">At <span class="accent">11:00 AM</span></div>
+      </div>
+
+      <div class="detail-box">
+        <div class="detail-label"><i class="fa-solid fa-champagne-glasses"></i> Ricevimento · Reception</div>
+        <div>Mamamare</div>
+        <div>A seguire dopo la cerimonia</div>
+        <div class="eng">Mamamare Restaurant</div>
+        <div class="eng">Following the ceremony</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="detail-label"><i class="fa-solid fa-user-tie"></i> Dress Code</div>
+        <div>Elegante ma comodo per ballare ✨</div>
+        <div class="eng">Elegant yet comfortable for dancing ✨</div>
+      </div>
+
+      <div class="detail-box">
+        <div class="detail-label"><i class="fa-solid fa-plane"></i> Tema · Theme</div>
+        <div>Viaggio &amp; destinazioni: ogni invitato è un passeggero speciale del nostro volo.</div>
+        <div class="eng">Travel &amp; destinations: every guest is a special passenger on our journey.</div>
+      </div>
+    </div>
+
+    <p class="note">
+      Tutte le informazioni aggiornate (orari, eventuali navette, indicazioni stradali) saranno disponibili qui man mano che ci avviciniamo alla data.<br>
+      <span class="eng">All updated information (times, shuttles, directions) will be available here as the date approaches.</span>
+    </p>
+
+    <div class="cta">
+      <a href="index.html" class="btn-primary">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Torna alla Home · Back to Home</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Luca &amp; Claudia · 15.06.2026 · Con affetto, non vediamo l’ora di festeggiare con te 💛<br>
+  <span class="eng">With love, we can’t wait to celebrate with you 💛</span>
+</footer>
 
 </body>
 </html>
-
