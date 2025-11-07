@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alloggi · Luca & Claudia Wedding</title>
+  <title>Dove dormire · Luca & Claudia Wedding</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root {
       --sage: #7c8f7a;
-      --gold: #c9b16d;
+      --sage-light: #f4f6f2;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
       --bg: #faf9f6;
       --text: #3e3e3e;
     }
@@ -18,201 +21,223 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
+      font-family: "Nunito", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    nav {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid rgba(201,177,109,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-align: center;
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    nav a span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: -2px;
+    }
+
+    nav a:hover { color: var(--gold1); }
 
     header {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 30px;
+      padding: 40px 20px;
       text-align: center;
-      padding: 30px 16px 10px;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
     }
 
-    .monogram {
-      font-family: "Playfair Display", serif;
-      font-size: 1.4rem;
-      color: var(--gold);
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
+    header::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40px;
+      width: 120px;
+      height: 140%;
+      background: linear-gradient(145deg, #fdf7e4, var(--gold1), #fdf7e4);
+      opacity: 0.9;
+      transform: skewX(-10deg);
+      z-index: 0;
     }
 
-    h1 {
+    header h1 {
       font-family: "Playfair Display", serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: var(--sage);
-      margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
     }
 
-    .subtitle {
-      font-size: 0.95rem;
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 1rem;
       color: #777;
-      margin-bottom: 20px;
     }
 
     main {
       max-width: 900px;
-      margin: 0 auto 40px;
-      padding: 0 16px 40px;
+      width: 100%;
+      padding: 40px 20px 80px;
     }
 
-    .hotel-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .card {
+    section {
       background: #fff;
-      border-radius: 14px;
-      padding: 16px 18px;
-      border: 1px solid rgba(201,177,109,0.4);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      margin-bottom: 40px;
     }
 
-    .card h2 {
+    h2 {
       font-family: "Playfair Display", serif;
-      font-size: 1.2rem;
       color: var(--sage);
-      margin-bottom: 4px;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
 
-    .location {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 6px;
+    ul {
+      list-style: none;
+      margin-top: 10px;
+      line-height: 1.7;
     }
 
-    .desc {
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-    }
-
-    .eng {
-      font-size: 0.85rem;
-      font-style: italic;
-      color: #777;
-    }
-
-    .note {
-      font-size: 0.85rem;
-      color: #777;
-      margin-top: 18px;
+    ul li {
+      margin-bottom: 18px;
     }
 
     a {
-      color: var(--sage);
+      color: var(--gold1);
       text-decoration: none;
+      transition: color 0.2s;
     }
 
-    .back {
-      display: inline-block;
-      margin-top: 24px;
-      font-size: 0.9rem;
-      color: var(--sage);
-      text-decoration: none;
-      border-radius: 999px;
-      border: 1px solid rgba(124,143,122,0.5);
-      padding: 8px 16px;
+    a:hover { color: var(--gold2); }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 26px 16px 32px;
     }
 
-    @media (min-width: 720px) {
-      .hotel-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    @media (max-width: 720px) {
+      header { border-radius: 0; }
+      nav { gap: 12px; font-size: 0.85rem; }
     }
   </style>
 </head>
+
 <body>
+  <nav>
+    <a href="index.html">Home<span>Home</span></a>
+    <a href="alloggi.html">Alloggi<span>Where to stay</span></a>
+    <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
+    <a href="around.html">Cosa fare<span>Things to do</span></a>
+    <a href="travel.html">Come arrivare<span>How to get there</span></a>
+  </nav>
 
-<header>
-  <div class="monogram">L &amp; C</div>
-  <h1>Dove dormire</h1>
-  <p class="subtitle">
-    Alcune strutture consigliate per il vostro soggiorno a Minturno e dintorni.<br>
-    <span class="eng">A selection of places to stay around Minturno and nearby.</span>
-  </p>
-</header>
+  <header>
+    <h1>Dove dormire</h1>
+    <p><em>Where to stay</em></p>
+  </header>
 
-<main>
-  <div class="hotel-grid">
+  <main>
+    <section>
+      <h2>Hotel consigliati · <span style="font-style:italic; color:#777;">Recommended hotels</span></h2>
+      <ul>
+        <li>
+          🏛️ <strong>Hotel Teatro Romano</strong><br>
+          <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
+            booking.com/hotel/teatro-romano
+          </a><br>
+          <span>
+            Situato accanto all’antico teatro romano di Minturno, offre camere moderne con vista panoramica e un’atmosfera tranquilla.<br>
+            <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
+          </span>
+        </li>
 
-    <div class="card">
-      <h2>Hotel Teatro Romano</h2>
-      <p class="location">Minturno</p>
-      <p class="desc">
-        Hotel vicino all’area archeologica, camere moderne e luminose, comodo per chi vuole esplorare il centro storico.
-      </p>
-      <p class="eng">
-        Close to the archaeological site, with modern bright rooms – ideal if you’d like to explore the old town.
-      </p>
-    </div>
+        <li>
+          🌿 <strong>Albergo Eleonora</strong><br>
+          <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
+            booking.com/hotel/albergo-eleonora
+          </a><br>
+          <span>
+            Un’accogliente struttura a gestione familiare nel cuore di Minturno, con camere luminose e un’ottima colazione.<br>
+            <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms and an excellent breakfast.</em>
+          </span>
+        </li>
 
-    <div class="card">
-      <h2>Hotel Villa Eleonora</h2>
-      <p class="location">Marina di Minturno · fronte mare</p>
-      <p class="desc">
-        Storica struttura sul lungomare, alcune camere vista mare e accesso diretto alla spiaggia.
-      </p>
-      <p class="eng">
-        A classic seaside hotel on the waterfront, some rooms with sea view and direct beach access.
-      </p>
-    </div>
+        <li>
+          🌸 <strong>La Rosetta</strong><br>
+          <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
+            booking.com/hotel/la-rosetta
+          </a><br>
+          <span>
+            A pochi minuti dal mare, combina comfort moderno e ospitalità locale — perfetta per chi cerca relax.<br>
+            <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort and local hospitality — perfect for a relaxing stay.</em>
+          </span>
+        </li>
+      </ul>
+    </section>
 
-    <div class="card">
-      <h2>Hotel La Rosetta</h2>
-      <p class="location">Marina di Minturno</p>
-      <p class="desc">
-        Hotel semplice e funzionale a pochi passi dalla spiaggia, ideale per un soggiorno pratico vicino al mare.
+    <section>
+      <h2>Altre opzioni · <span style="font-style:italic; color:#777;">Other options</span></h2>
+      <p>
+        In Minturno e Formia troverai numerose strutture su 
+        <a href="https://www.booking.com/searchresults.it.html?dest_id=-120307&dest_type=city" target="_blank">Booking.com</a> 
+        e 
+        <a href="https://www.airbnb.com/s/Formia--Italy" target="_blank">Airbnb</a>.<br>
+        <span style="font-style:italic; color:#777;">
+          In Minturno and Formia you’ll find many more accommodations on 
+          <a href="https://www.booking.com/searchresults.en.html?dest_id=-120307&dest_type=city" target="_blank">Booking.com</a> 
+          and 
+          <a href="https://www.airbnb.com/s/Formia--Italy" target="_blank">Airbnb</a>.
+        </span>
       </p>
-      <p class="eng">
-        Simple and functional hotel just a short walk from the beach – great for a practical stay by the sea.
-      </p>
-    </div>
 
-    <div class="card">
-      <h2>Minturnae Hotel</h2>
-      <p class="location">Marina di Minturno</p>
-      <p class="desc">
-        Struttura recente con camere confortevoli, giardino e posizione comoda per spostarsi tra mare e centro.
+      <p style="margin-top:10px;">
+        Ti consigliamo di prenotare con anticipo, specialmente nei mesi estivi. ☀️<br>
+        <span style="font-style:italic; color:#777;">We recommend booking early, especially during summer months.</span>
       </p>
-      <p class="eng">
-        A modern hotel with comfortable rooms and a garden, conveniently located between the beach and town.
-      </p>
-    </div>
+    </section>
+  </main>
 
-    <div class="card">
-      <h2>Hotel Aurora</h2>
-      <p class="location">Scauri · vista mare</p>
-      <p class="desc">
-        Hotel fronte mare con piscina (stagionale) e ristorante, adatto a famiglie e coppie.
-      </p>
-      <p class="eng">
-        Seafront hotel with a seasonal pool and restaurant, suitable for both couples and families.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Hotel Panoramico</h2>
-      <p class="location">Marina di Minturno</p>
-      <p class="desc">
-        Come suggerisce il nome, offre una bella vista sul mare e un’atmosfera rilassata per chi cerca tranquillità.
-      </p>
-      <p class="eng">
-        As the name suggests, it offers lovely sea views and a relaxed atmosphere for a quiet stay.
-      </p>
-    </div>
-
-  </div>
-
-  <p class="note">
-    Ti consigliamo di prenotare con anticipo, soprattutto per i weekend.<br>
-    <span class="eng">We recommend booking early, especially for weekends and high season.</span>
-  </p>
-
-  <a href="index.html" class="back">← Torna alla home · Back to home</a>
-</main>
-
+  <footer>
+    Luca &amp; Claudia · 15.06.2026 💛<br>
+    <span style="font-style:italic; color:#777;">With love, we can’t wait to celebrate with you.</span>
+  </footer>
 </body>
 </html>
