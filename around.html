@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosa fare nei dintorni · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --sage-light: #f4f6f2;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid rgba(201,177,109,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-align: center;
+      transition: color 0.25s ease;
+    }
+
+    nav a span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: -2px;
+    }
+
+    nav a:hover { color: var(--gold1); }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -40px;
+      width: 120px;
+      height: 140%;
+      background: linear-gradient(145deg, #fdf7e4, var(--gold1), #fdf7e4);
+      opacity: 0.9;
+      transform: skewX(-10deg);
+      z-index: 0;
+    }
+
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      color: var(--sage);
+      position: relative;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      padding: 40px 20px 80px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--sage);
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+
+    .places-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .place-card {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(201,177,109,0.3);
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .place-card h3 {
+      color: var(--gold1);
+      font-family: "Playfair Display", serif;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+
+    .place-card p {
+      line-height: 1.6;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--gold1);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover { color: var(--gold2); }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 26px 16px 32px;
+    }
+
+    @media (max-width: 720px) {
+      .places-grid {
+        grid-template-columns: 1fr;
+      }
+      header { border-radius: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home<span>Home</span></a>
+    <a href="alloggi.html">Alloggi<span>Where to stay</span></a>
+    <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
+    <a href="around.html">Cosa fare<span>Things to do</span></a>
+    <a href="travel.html">Come arrivare<span>How to get there</span></a>
+    <a href="afterparty.html">After Party<span>Photos</span></a>
+  </nav>
+
+  <header>
+    <h1>Cosa fare nei dintorni</h1>
+    <p><em>Things to do nearby</em></p>
+  </header>
+
+  <main>
+    <!-- NATURA E MARE -->
+    <section>
+      <h2>Mare &amp; natura · <span style="font-style:italic; color:#777;">Sea &amp; nature</span></h2>
+
+      <div class="places-grid">
+        <div class="place-card">
+          <h3>🌊 Spiaggia di Minturno &amp; Scauri</h3>
+          <p>
+            Una lunga spiaggia sabbiosa con stabilimenti e chioschi, perfetta per rilassarsi al sole o fare una passeggiata al tramonto.
+            <br><em style="color:#777;">A long sandy beach with beach clubs and kiosks, perfect for sunbathing or sunset walks.</em>
+          </p>
+          <p>🔗 <a href="https://www.tripadvisor.it/Attraction_Review-g2052393-d12415798-Reviews-Lido_Il_Vascello-Minturno.html" target="_blank">Scopri di più · More info</a></p>
+        </div>
+
+        <div class="place-card">
+          <h3>🌿 Parco di Gianola &amp; Monte d’Oro</h3>
+          <p>
+            Riserva naturale tra Minturno e Formia con sentieri panoramici, resti romani e pinete affacciate sul mare.
+            <br><em style="color:#777;">A natural park between Minturno and Formia, featuring sea-view trails, Roman ruins and pinewoods.</em>
+          </p>
+          <p>🔗 <a href="https://www.parks.it/parco.riviera.ulisse/" target="_blank">Sito ufficiale · Official site</a></p>
+        </div>
+
+        <div class="place-card">
+          <h3>🏖️ Gaeta &amp; la Grotta del Turco</h3>
+          <p>
+            Scalinata spettacolare che conduce a una cavità naturale tra le scogliere di Gaeta, con viste mozzafiato sul mare. Imperdibile al tramonto.
+            <br><em style="color:#777;">A stunning natural cave reached by steps through Gaeta’s cliffs – breathtaking views, especially at sunset.</em>
+          </p>
+          <p>🔗 <a href="https://www.tripadvisor.it/Attraction_Review-g187790-d2067861-Reviews-Grotta_Del_Turco-Gaeta.html" target="_blank">Info &amp; foto</a></p>
+        </div>
+
+        <div class="place-card">
+          <h3>🌸 Sperlonga &amp; la Grotta di Tiberio</h3>
+          <p>
+            Una delle località più suggestive del Lazio: case bianche e mare cristallino, con la Grotta di Tiberio e il museo archeologico dedicato all’imperatore romano.
+            <br><em style="color:#777;">One of Lazio’s most scenic spots: whitewashed houses and crystal-clear sea, plus Tiberius’ Cave and its archaeological museum.</em>
+          </p>
+          <p>🔗 <a href="https://museotiberio.cultura.gov.it/" target="_blank">Museo &amp; Grotta · Museum site</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORIA E CULTURA -->
+    <section>
+      <h2>Storia &amp; cultura · <span style="font-style:italic; color:#777;">History &amp; culture</span></h2>
+
+      <div class="places-grid">
+        <div class="place-card">
+          <h3>🏛️ Complesso archeologico del Teatro Romano (Minturno)</h3>
+          <p>
+            Resti perfettamente conservati dell’antica Minturnae, con teatro, terme e foro romano. Un viaggio nella storia a due passi dalla chiesa del matrimonio.
+            <br><em style="color:#777;">Beautifully preserved ruins of ancient Minturnae, including the theatre, baths and Roman forum – just minutes from the wedding church.</em>
+          </p>
+          <p>🔗 <a href="https://www.musei.lazio.beniculturali.it/musei/complesso-archeologico-di-minturnae/" target="_blank">Sito ufficiale · Official site</a></p>
+        </div>
+
+        <div class="place-card">
+          <h3>🏺 Tomba di Cicerone (Formia)</h3>
+          <p>
+            Monumento romano attribuito a Marco Tullio Cicerone, immerso nel verde di Formia: un luogo di storia e leggenda, visitabile tutto l’anno.
+            <br><em style="color:#777;">Roman monument traditionally identified as Cicero’s Tomb, surrounded by greenery in Formia – a mix of history and legend.</em>
+          </p>
+          <p>🔗 <a href="https://www.comune.formia.lt.it/it/point-of-interest/247372" target="_blank">Visita Formia · Visit Formia</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITE -->
+    <section>
+      <h2>Gite giornaliere · <span style="font-style:italic; color:#777;">Day trips</span></h2>
+
+      <div class="places-grid">
+        <div class="place-card">
+          <h3>🚗 Napoli</h3>
+          <p>
+            Minturno dista circa <strong>80 km</strong> da Napoli (1h in auto o treno). Perfetta per una gita tra centro storico, pizza e lungomare.
+            <br><em style="color:#777;">About 80 km from Naples (1h by car or train) – great for a day trip to enjoy history, pizza and sea views.</em>
+          </p>
+          <p>🔗 <a href="https://www.visitnaples.eu" target="_blank">Visit Naples</a></p>
+        </div>
+
+        <div class="place-card">
+          <h3>🚆 Roma</h3>
+          <p>
+            A circa <strong>150 km</strong> (1h40m in treno), Roma è facilmente raggiungibile per chi desidera scoprire la Città Eterna tra arte e storia.
+            <br><em style="color:#777;">Around 150 km away (1h40m by train), Rome is easily reachable for those wanting to explore the Eternal City.</em>
+          </p>
+          <p>🔗 <a href="https://www.turismoroma.it" target="_blank">Visit Rome</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Luca &amp; Claudia · 15.06.2026 💛<br>
+    <span style="font-style:italic; color:#777;">With love, we can’t wait to celebrate with you.</span>
+  </footer>
+</body>
+</html>
