@@ -30,6 +30,7 @@
       align-items: center;
     }
 
+    /* NAVBAR */
     nav {
       width: 100%;
       background: #fff;
@@ -64,6 +65,7 @@
 
     nav a:hover { color: var(--gold1); }
 
+    /* HEADER */
     header {
       width: 100%;
       max-width: 960px;
@@ -106,6 +108,7 @@
       color: #777;
     }
 
+    /* MAIN */
     main {
       max-width: 900px;
       width: 100%;
@@ -128,8 +131,15 @@
       font-size: 1.4rem;
     }
 
-    .hotel-card {
+    /* GRID CARD 2 COLONNE */
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
       margin-top: 18px;
+    }
+
+    .hotel-card {
       padding: 16px;
       border-radius: 14px;
       border: 1px solid rgba(201,177,109,0.3);
@@ -141,11 +151,13 @@
       color: var(--gold1);
       font-family: "Playfair Display", serif;
       margin-bottom: 6px;
+      font-size: 1.1rem;
     }
 
     .hotel-card p {
       line-height: 1.6;
       margin-bottom: 6px;
+      font-size: 0.95rem;
     }
 
     a {
@@ -188,43 +200,64 @@
     <section>
       <h2>Hotel consigliati · <span style="font-style:italic; color:#777;">Recommended hotels</span></h2>
 
-      <div class="hotel-card">
-        <h3>🏛️ Hotel Teatro Romano</h3>
-        <p>
-          Situato accanto all’antico teatro romano di Minturno, offre camere moderne con vista panoramica e un’atmosfera tranquilla.<br>
-          <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
-        </p>
-        <p>
-          🔗 <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
-            booking.com/hotel/teatro-romano
-          </a>
-        </p>
-      </div>
+      <div class="hotel-grid">
 
-      <div class="hotel-card">
-        <h3>🌿 Albergo Eleonora</h3>
-        <p>
-          Un’accogliente struttura a gestione familiare nel cuore di Minturno, con camere luminose, vista panoramica e un’ottima colazione.<br>
-          <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms with panoramic views and an excellent breakfast.</em>
-        </p>
-        <p>
-          🔗 <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
-            booking.com/hotel/albergo-eleonora
-          </a>
-        </p>
-      </div>
+        <div class="hotel-card">
+          <h3>🏛️ Hotel Teatro Romano</h3>
+          <p>
+            Situato accanto all’antico teatro romano di Minturno, offre camere moderne con vista panoramica e un’atmosfera tranquilla.<br>
+            <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
+          </p>
+          <p>
+            🔗 <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
+              booking.com/hotel/teatro-romano
+            </a>
+          </p>
+        </div>
 
-      <div class="hotel-card">
-        <h3>🌸 La Rosetta</h3>
-        <p>
-          A pochi minuti dal mare, combina comfort moderno, ospitalità locale e una splendida vista panoramica sul Golfo.<br>
-          <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort, local hospitality and a stunning panoramic view of the gulf.</em>
-        </p>
-        <p>
-          🔗 <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
-            booking.com/hotel/la-rosetta
-          </a>
-        </p>
+        <div class="hotel-card">
+          <h3>🌿 Albergo Eleonora</h3>
+          <p>
+            Un’accogliente struttura a gestione familiare nel cuore di Minturno, con camere luminose, vista panoramica e un’ottima colazione.<br>
+            <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms with panoramic views and an excellent breakfast.</em>
+          </p>
+          <p>
+            🔗 <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
+              booking.com/hotel/albergo-eleonora
+            </a>
+          </p>
+        </div>
+
+        <div class="hotel-card">
+          <h3>🌸 La Rosetta</h3>
+          <p>
+            A pochi minuti dal mare, combina comfort moderno, ospitalità locale e una splendida vista panoramica sul Golfo.<br>
+            <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort, local hospitality and a stunning panoramic view of the gulf.</em>
+          </p>
+          <p>
+            🔗 <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
+              booking.com/hotel/la-rosetta
+            </a>
+          </p>
+        </div>
+
+        <div class="hotel-card">
+          <h3>🌊 Cumeja Beach Club &amp; Hotel (Mamamare)</h3>
+          <p>
+            Struttura sul mare con spiaggia privata e ambienti curati, è anche la location del nostro ricevimento Mamamare. Gli ospiti del matrimonio
+            avranno diritto a una tariffa agevolata dedicata (dettagli a breve).<br>
+            <em style="color:#777;">
+              Seafront hotel with private beach and refined spaces – it’s also the location of our Mamamare reception. Wedding guests will have access
+              to a special discounted rate (details coming soon).
+            </em>
+          </p>
+          <p>
+            🔗 <a href="https://www.cumeja.it" target="_blank">
+              cumeja.it
+            </a>
+          </p>
+        </div>
+
       </div>
     </section>
 
