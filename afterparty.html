@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>After Party · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --sage-light: #f4f6f2;
+      --gold1: #c9b16d;
+      --bg: #faf9f6;
+      --text: #3e3e3e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid rgba(201,177,109,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--sage);
+      text-align: center;
+      transition: color 0.25s ease;
+    }
+
+    nav a span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: #999;
+      margin-top: -2px;
+    }
+
+    nav a:hover { color: var(--gold1); }
+
+    header {
+      width: 100%;
+      max-width: 960px;
+      margin-top: 30px;
+      padding: 40px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #ffffff, var(--sage-light));
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-family: "Playfair Display", serif;
+      font-size: 2.2rem;
+      color: var(--sage);
+      position: relative;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      z-index: 1;
+      margin-top: 6px;
+      font-size: 1rem;
+      color: #777;
+    }
+
+    main {
+      max-width: 900px;
+      width: 100%;
+      padding: 40px 20px 80px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: var(--sage);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.15s;
+      text-decoration: none;
+      margin-top: 12px;
+    }
+
+    .btn:hover {
+      background: #6b7f69;
+      transform: translateY(-1px);
+    }
+
+    .gallery {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .photo-placeholder {
+      background: #f0f0ec;
+      border-radius: 12px;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-style: italic;
+      border: 1px dashed rgba(201,177,109,0.3);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 26px 16px 32px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home<span>Home</span></a>
+    <a href="alloggi.html">Alloggi<span>Where to stay</span></a>
+    <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
+    <a href="around.html">Cosa fare<span>Things to do</span></a>
+    <a href="travel.html">Come arrivare<span>How to get there</span></a>
+    <a href="rsvp.html">RSVP<span>Confirm</span></a>
+    <a href="afterparty.html">After Party<span>Photos</span></a>
+  </nav>
+
+  <header>
+    <h1>After Party</h1>
+    <p><em>Carica e condividi i ricordi del nostro grande giorno 💛<br>Upload and share the memories from our big day 💛</em></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>📸 Condividi le tue foto · Share your pictures</h2>
+      <p>
+        Durante il matrimonio troverai un <strong>QR code</strong> che ti porterà a questa pagina.  
+        Dopo la festa, potrai caricare qui le tue foto e i tuoi video preferiti per condividerli con tutti noi.  
+        <br><em>At the wedding, you’ll find a QR code leading here — after the party, you can upload your favorite photos and videos to share with us!</em>
+      </p>
+
+      <a href="https://forms.gle/your-photo-upload-link" target="_blank" class="btn">📤 Carica le tue foto · Upload your photos</a>
+
+      <div class="gallery">
+        <div class="photo-placeholder">In arrivo le vostre foto 💛<br><em>Photos coming soon</em></div>
+        <div class="photo-placeholder">✨</div>
+        <div class="photo-placeholder">💍</div>
+        <div class="photo-placeholder">🥂</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Luca &amp; Claudia · 15.06.2026 💛<br>
+    <span style="font-style:italic; color:#777;">With love, we can’t wait to see your memories.</span>
+  </footer>
+</body>
+</html>
