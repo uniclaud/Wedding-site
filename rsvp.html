@@ -1,5 +1,28 @@
-<style>
-nav {
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP · Luca & Claudia Wedding</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --sage: #7c8f7a;
+      --gold1: #c9b16d;
+      --gold2: #e8d6a3;
+    }
+
+    body {
+      font-family: "Nunito", system-ui, sans-serif;
+      background: #faf9f6;
+      color: #3e3e3e;
+      margin: 0;
+    }
+
+    nav {
       width: 100%;
       background: #fff;
       border-bottom: 1px solid rgba(201,177,109,0.3);
@@ -39,7 +62,31 @@ nav {
     nav a:hover span {
       color: var(--gold2);
     }
-</style>
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      border: 1px dashed rgba(124,143,122,0.25);
+      padding: 22px 20px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--sage);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
 
   <!-- 🔸 NAVBAR bilingue -->
   <nav>
@@ -48,33 +95,36 @@ nav {
     <a href="ristoranti.html">Ristoranti<span>Restaurants</span></a>
     <a href="around.html">Cosa fare<span>Things to do</span></a>
     <a href="travel.html">Come arrivare<span>How to get there</span></a>
-    <a href="rsvp">RSVP<span>Confirm</span></a>
+    <a href="rsvp.html" class="active">RSVP<span>Confirm</span></a>
     <a href="afterparty.html">After Party<span>Photos</span></a>
   </nav>
 
-<section>
-  <h2>RSVP · <span style="font-style:italic; color:#777;">Confirm your attendance</span></h2>
-  <p style="text-align:center;">
-    Ti chiediamo gentilmente di compilare il modulo RSVP entro il <strong>15 aprile 2026</strong>.<br>
-    <em>Please fill out the RSVP form by April 15th, 2026.</em>
-  </p>
+  <section>
+    <h2>RSVP · <span style="font-style:italic; color:#777;">Confirm your attendance</span></h2>
+    <p>
+      Ti chiediamo gentilmente di compilare il modulo RSVP entro il <strong>15 aprile 2026</strong>.<br>
+      <em>Please fill out the RSVP form by April 15th, 2026.</em>
+    </p>
 
-  <div style="
-      margin-top:20px;
-      border:1px dashed rgba(201,177,109,0.4);
-      border-radius:16px;
-      overflow:hidden;
-      box-shadow:0 6px 20px rgba(0,0,0,0.05);
-  ">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSel77nhz05zlYhG-CrJJzM1jRWRiDYRKlZ6hIKimr4aK0UL0A/viewform?embedded=true" 
-      width="100%" height="2306" frameborder="0" marginheight="0" marginwidth="0">
-      Caricamento…
-    </iframe>
-  </div>
+    <div style="
+        margin-top:20px;
+        border:1px dashed rgba(201,177,109,0.4);
+        border-radius:16px;
+        overflow:hidden;
+        box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    ">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSel77nhz05zlYhG-CrJJzM1jRWRiDYRKlZ6hIKimr4aK0UL0A/viewform?embedded=true" 
+        width="100%" height="2306" frameborder="0" marginheight="0" marginwidth="0">
+        Caricamento…
+      </iframe>
+    </div>
 
-  <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:18px;">
-    Il modulo si aprirà qui sotto. Tutte le risposte arriveranno direttamente a noi 💛<br>
-    <em>The form loads below — your answers will be sent directly to us 💛</em>
-  </p>
-</section>
+    <p style="font-size:0.9rem; color:#666; margin-top:18px;">
+      Il modulo si aprirà qui sotto. Tutte le risposte arriveranno direttamente a noi 💛<br>
+      <em>The form loads below — your answers will be sent directly to us 💛</em>
+    </p>
+  </section>
+
+</body>
+</html>
