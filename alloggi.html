@@ -51,7 +51,6 @@
       font-size: 0.9rem;
       color: var(--sage);
       text-align: center;
-      position: relative;
       transition: color 0.25s ease;
     }
 
@@ -127,16 +126,16 @@
     h2 {
       font-family: "Playfair Display", serif;
       color: var(--sage);
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       font-size: 1.4rem;
+      text-align: center;
     }
 
-    /* GRID CARD 2 COLONNE */
+    /* GRID 2x2 */
     .hotel-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .hotel-card {
@@ -176,8 +175,10 @@
     }
 
     @media (max-width: 720px) {
+      .hotel-grid {
+        grid-template-columns: 1fr;
+      }
       header { border-radius: 0; }
-      nav { gap: 12px; font-size: 0.85rem; }
     }
   </style>
 </head>
@@ -201,7 +202,6 @@
       <h2>Hotel consigliati · <span style="font-style:italic; color:#777;">Recommended hotels</span></h2>
 
       <div class="hotel-grid">
-
         <div class="hotel-card">
           <h3>🏛️ Hotel Teatro Romano</h3>
           <p>
@@ -209,9 +209,7 @@
             <em style="color:#777;">Located next to Minturno’s ancient Roman theatre, it offers modern rooms with panoramic views and a peaceful atmosphere.</em>
           </p>
           <p>
-            🔗 <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">
-              booking.com/hotel/teatro-romano
-            </a>
+            🔗 <a href="https://www.booking.com/hotel/it/teatro-romano-minturno.it.html" target="_blank">booking.com/hotel/teatro-romano</a>
           </p>
         </div>
 
@@ -222,9 +220,7 @@
             <em style="color:#777;">A cozy, family-run hotel in the heart of Minturno, featuring bright rooms with panoramic views and an excellent breakfast.</em>
           </p>
           <p>
-            🔗 <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">
-              booking.com/hotel/albergo-eleonora
-            </a>
+            🔗 <a href="https://www.booking.com/hotel/it/albergo-eleonora.it.html" target="_blank">booking.com/hotel/albergo-eleonora</a>
           </p>
         </div>
 
@@ -235,29 +231,20 @@
             <em style="color:#777;">Just a few minutes from the sea, it combines modern comfort, local hospitality and a stunning panoramic view of the gulf.</em>
           </p>
           <p>
-            🔗 <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">
-              booking.com/hotel/la-rosetta
-            </a>
+            🔗 <a href="https://www.booking.com/hotel/it/la-rosetta-minturno.it.html" target="_blank">booking.com/hotel/la-rosetta</a>
           </p>
         </div>
 
         <div class="hotel-card">
           <h3>🌊 Cumeja Beach Club &amp; Hotel (Mamamare)</h3>
           <p>
-            Struttura sul mare con spiaggia privata e ambienti curati, è anche la location del nostro ricevimento Mamamare. Gli ospiti del matrimonio
-            avranno diritto a una tariffa agevolata dedicata (dettagli a breve).<br>
-            <em style="color:#777;">
-              Seafront hotel with private beach and refined spaces – it’s also the location of our Mamamare reception. Wedding guests will have access
-              to a special discounted rate (details coming soon).
-            </em>
+            Struttura sul mare con spiaggia privata e ambienti curati, è anche la location del nostro ricevimento Mamamare. Gli ospiti del matrimonio avranno diritto a una tariffa agevolata dedicata (dettagli a breve).<br>
+            <em style="color:#777;">Seafront hotel with private beach and refined spaces – it’s also the location of our Mamamare reception. Wedding guests will have access to a special discounted rate (details coming soon).</em>
           </p>
           <p>
-            🔗 <a href="https://www.cumeja.it" target="_blank">
-              cumeja.it
-            </a>
+            🔗 <a href="https://www.cumeja.it" target="_blank">cumeja.it</a>
           </p>
         </div>
-
       </div>
     </section>
 
