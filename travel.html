@@ -198,6 +198,145 @@
       color: #999;
       padding: 26px 16px 32px;
     }
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.venue-card {
+  position: relative;
+  padding: 18px 16px 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #fffdf7);
+  border: 1px solid rgba(201,177,109,0.35);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.venue-card::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(201,177,109,0.25), transparent 60%);
+  transform: rotate(15deg);
+}
+
+.venue-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.venue-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(124,143,122,0.12);
+  border: 1px solid rgba(124,143,122,0.22);
+  color: var(--sage);
+  flex: 0 0 auto;
+}
+
+.venue-title h3 {
+  margin: 0;
+  color: var(--sage);
+  font-family: "Playfair Display", serif;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.venue-title .venue-sub {
+  margin-top: 4px;
+  color: #777;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.venue-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  background: rgba(124,143,122,0.08);
+  border: 1px solid rgba(124,143,122,0.18);
+  color: #556;
+}
+
+.pill i { color: var(--gold1); }
+
+.venue-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-map {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, background 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-map-primary {
+  background: var(--sage);
+  color: #fff;
+}
+
+.btn-map-primary:hover {
+  background: #6b7f69;
+  transform: translateY(-1px);
+}
+
+.btn-map-secondary {
+  background: #fff;
+  color: var(--sage);
+  border-color: rgba(124,143,122,0.35);
+}
+
+.btn-map-secondary:hover {
+  border-color: rgba(201,177,109,0.7);
+  color: var(--gold1);
+  transform: translateY(-1px);
+}
+
+.venue-hint {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+}
+
 
     @media (max-width: 720px) {
       header { border-radius: 0; }
@@ -218,7 +357,7 @@
 
   <header>
     <h1>Come arrivare</h1>
-    <p><em>How to get there &amp; RSVP</em></p>
+    <p><em>How to get there </em></p>
   </header>
 
   <main>
@@ -271,6 +410,87 @@
         <em>Minturno lies on the Tyrrhenian coast between Rome and Naples, easily accessible by car or train.</em>
       </p>
     </section>
+
+    <section>
+  <h2>Indicazioni · <span style="font-style:italic; color:#777;">Directions</span></h2>
+
+  <p style="text-align:center; color:#666; margin-bottom: 10px;">
+    Seleziona la destinazione per aprire la navigazione.<br>
+    <em>Select a destination to start navigation.</em>
+  </p>
+
+  <div class="venues-grid">
+
+    <!-- CHIESA -->
+    <div class="venue-card">
+      <div class="venue-top">
+        <div class="venue-icon"><i class="fa-solid fa-church"></i></div>
+        <div class="venue-title">
+          <h3>Chiesa di San Pietro Apostolo</h3>
+          <div class="venue-sub">
+            Piazza S. Pietro, 04026 Minturno (LT)<br>
+            <em>Church · Minturno</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-meta">
+        <span class="pill"><i class="fa-regular fa-clock"></i> 11:00</span>
+        <span class="pill"><i class="fa-solid fa-location-dot"></i> Minturno</span>
+      </div>
+
+      <div class="venue-actions">
+        <a class="btn-map btn-map-primary" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir//Piazza+S.+Pietro,+04026+Minturno+LT,+Italia/@52.8809984,-8.2029799,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x133ac545cbe8aa63:0xc57279315412f2a3!2m2!1d13.747438!2d41.263496?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D">
+          <i class="fa-brands fa-google"></i> Google Maps
+        </a>
+
+        <a class="btn-map btn-map-secondary" target="_blank" rel="noopener"
+           href="https://maps.apple.com/?daddr=Piazza%20S.%20Pietro,%2004026%20Minturno%20LT,%20Italia">
+          <i class="fa-brands fa-apple"></i> Apple Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- MAMAMARE -->
+    <div class="venue-card">
+      <div class="venue-top">
+        <div class="venue-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+        <div class="venue-title">
+          <h3>Mamamare</h3>
+          <div class="venue-sub">
+            Via dell’Erica, Baia Felice (CE)<br>
+            <em>Reception venue</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="venue-meta">
+        <span class="pill"><i class="fa-solid fa-utensils"></i> Ricevimento</span>
+        <span class="pill"><i class="fa-solid fa-location-dot"></i> Baia Felice</span>
+      </div>
+
+      <div class="venue-actions">
+        <a class="btn-map btn-map-primary" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/dir//Mamamare,+Via+dell'Erica,+Baia+Felice,+CE,+Italia/@52.8809984,-8.2029799,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x133adc0f33160bef:0x8cc956c225d579b2!2m2!1d13.8275501!2d41.1740947?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D">
+          <i class="fa-brands fa-google"></i> Google Maps
+        </a>
+
+        <a class="btn-map btn-map-secondary" target="_blank" rel="noopener"
+           href="https://maps.apple.com/?daddr=Mamamare,%20Via%20dell%27Erica,%20Baia%20Felice,%20CE,%20Italia">
+          <i class="fa-brands fa-apple"></i> Apple Maps
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="venue-hint">
+    Suggerimento: salva entrambe le posizioni nei Preferiti di Maps 💛
+    <br><em>Tip: save both places in your Maps favorites.</em>
+  </div>
+</section>
+
 
     <!-- COME ARRIVARE -->
     <section>
