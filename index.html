@@ -277,6 +277,46 @@
       padding: 26px 16px 32px;
     }
 
+    .countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px auto 6px;
+  max-width: 420px;
+}
+
+.cd-item {
+  background: #fff;
+  border: 1px solid rgba(201,177,109,0.28);
+  border-radius: 14px;
+  padding: 10px 8px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.cd-item span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.35rem;
+  color: var(--sage);
+  line-height: 1.1;
+}
+
+.cd-item small {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 4px;
+}
+
+.countdown-sub {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+
     @media (max-width: 720px) {
       header {
         padding: 40px 14px;
@@ -297,6 +337,45 @@
     }
   </style>
 </head>
+  <script>
+  // Wedding date: 15 June 2026 (Italy). Set to noon to avoid timezone edge cases.
+  const target = new Date("2026-06-15T12:00:00+02:00");
+
+  const elDays = document.getElementById("cd-days");
+  const elHours = document.getElementById("cd-hours");
+  const elMins = document.getElementById("cd-mins");
+  const elSecs = document.getElementById("cd-secs");
+
+  function pad(n) { return String(n).padStart(2, "0"); }
+
+  function tick() {
+    const now = new Date();
+    let diff = target - now;
+
+    if (diff <= 0) {
+      elDays.textContent = "0";
+      elHours.textContent = "00";
+      elMins.textContent = "00";
+      elSecs.textContent = "00";
+      return;
+    }
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const mins = Math.floor((totalSeconds % 3600) / 60);
+    const secs = totalSeconds % 60;
+
+    elDays.textContent = days;
+    elHours.textContent = pad(hours);
+    elMins.textContent = pad(mins);
+    elSecs.textContent = pad(secs);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+</script>
+
 
 <body>
 
@@ -320,6 +399,16 @@
         <strong>15 Giugno 2026</strong> · Minturno, Italia<br>
         <span style="font-style:italic; color:#777;">15 June 2026 · Minturno, Italy</span>
       </div>
+      <div id="countdown" class="countdown">
+  <div class="cd-item"><span id="cd-days">—</span><small>giorni</small></div>
+  <div class="cd-item"><span id="cd-hours">—</span><small>ore</small></div>
+  <div class="cd-item"><span id="cd-mins">—</span><small>min</small></div>
+  <div class="cd-item"><span id="cd-secs">—</span><small>sec</small></div>
+</div>
+<div class="countdown-sub">
+  <em>Countdown to the big day</em>
+</div>
+
       <div class="icons-row">
         <i class="fa-solid fa-plane-departure"></i>
         <i class="fa-solid fa-heart"></i>
