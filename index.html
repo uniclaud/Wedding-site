@@ -337,44 +337,50 @@
     }
   </style>
 </head>
-  <script>
-  // Wedding date: 15 June 2026 (Italy). Set to noon to avoid timezone edge cases.
-  const target = new Date("2026-06-15T12:00:00+02:00");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
 
-  const elDays = document.getElementById("cd-days");
-  const elHours = document.getElementById("cd-hours");
-  const elMins = document.getElementById("cd-mins");
-  const elSecs = document.getElementById("cd-secs");
+    const target = new Date("2026-06-15T12:00:00+02:00");
 
-  function pad(n) { return String(n).padStart(2, "0"); }
+    const elDays  = document.getElementById("cd-days");
+    const elHours = document.getElementById("cd-hours");
+    const elMins  = document.getElementById("cd-mins");
+    const elSecs  = document.getElementById("cd-secs");
 
-  function tick() {
-    const now = new Date();
-    let diff = target - now;
-
-    if (diff <= 0) {
-      elDays.textContent = "0";
-      elHours.textContent = "00";
-      elMins.textContent = "00";
-      elSecs.textContent = "00";
-      return;
+    function pad(n) {
+      return String(n).padStart(2, "0");
     }
 
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const mins = Math.floor((totalSeconds % 3600) / 60);
-    const secs = totalSeconds % 60;
+    function tick() {
+      const now = new Date();
+      let diff = target - now;
 
-    elDays.textContent = days;
-    elHours.textContent = pad(hours);
-    elMins.textContent = pad(mins);
-    elSecs.textContent = pad(secs);
-  }
+      if (diff <= 0) {
+        elDays.textContent = "0";
+        elHours.textContent = "00";
+        elMins.textContent = "00";
+        elSecs.textContent = "00";
+        return;
+      }
 
-  tick();
-  setInterval(tick, 1000);
+      const totalSeconds = Math.floor(diff / 1000);
+      const days  = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const mins  = Math.floor((totalSeconds % 3600) / 60);
+      const secs  = totalSeconds % 60;
+
+      elDays.textContent  = days;
+      elHours.textContent = pad(hours);
+      elMins.textContent  = pad(mins);
+      elSecs.textContent  = pad(secs);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+
+  });
 </script>
+
 
 
 <body>
